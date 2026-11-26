@@ -89,8 +89,8 @@ window.CA_TESTS = {
       {"question": "सिद्धार्थ राजमार्ग अन्तर्गत बुटवल–पाल्पा सडकखण्डमा निर्माणाधीन सिद्धबाबा सुरुङमार्गको लम्बाइ कति रहेको छ ?", "options": ["१,०२६ मिटर", "१,१२६ मिटर", "१,२२६ मिटर", "१,३२६ मिटर"], "correct": 1, "explanation": "सिद्धार्थ राजमार्गको बुटवल–पाल्पा खण्डमा सिद्धबाबा सुरुङमार्गको लम्बाइ १,१२६ मिटर छ; पहुँच सडकसहित कुल २.५९ कि.मि. क्षेत्रमा पूर्वाधार निर्माण भइरहेको छ। सुरुङभित्रको भौतिक निर्माण ९५%, समग्र भौतिक प्रगति करिब ७०% र वित्तीय प्रगति करिब ६५% छ। लागत रु. सात अर्ब ३४ करोड २१ लाख छ।"}
     ]
   },
-  "2083-08-03":   {
-      "name": "Weekly Current Affairs Test — 3 Mangsir 2083",
+  "2083-08-02":   {
+      "name": "Weekly Current Affairs Test — 2 Mangsir 2083",
       "details": "Syllabus topic 1.16: National and international current affairs — 19 Nepali MCQs with answer explanations. Sahara Education weekly quiz, Lok Sewa First Paper pattern.",
       "questions": [
           {
