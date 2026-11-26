@@ -1,12 +1,14 @@
 RewriteEngine On
 
-# Force HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://arunpanthi.com.np%{REQUEST_URI} [R=301,L]
+# Canonical host: match the domain configured in CNAME (eraun.com.np).
+# Also redirect the previous domain, if still pointed here, to the canonical host.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^(www\.)?arunpanthi\.com\.np$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www\.eraun\.com\.np$ [NC]
+RewriteRule ^ https://eraun.com.np%{REQUEST_URI} [R=301,L]
 
-# Force non-www
-RewriteCond %{HTTP_HOST} ^www\.arunpanthi\.com\.np$ [NC]
-RewriteRule ^ https://arunpanthi.com.np%{REQUEST_URI} [R=301,L]
+# Keep the previous home URL working as a permanent alias.
+RewriteRule ^Home(?:\.html)?$ / [R=301,L,NC]
 
 # Remove trailing slash except for real directories
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -80,7 +82,7 @@ Options -Indexes
 ErrorDocument 400 /error/400.html
 ErrorDocument 401 /error/401.html
 ErrorDocument 403 /error/403.html
-ErrorDocument 404 /error/404.html
+ErrorDocument 404 /404.html
 ErrorDocument 500 /error/500.html
 
 # MIME types
