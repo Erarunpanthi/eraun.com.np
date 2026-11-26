@@ -100,7 +100,7 @@ footer,
    visible side effects on every page that loads this file (e.g. PSC Syllabus):
    the social bar's own 25px bottom gap was painted green instead of showing
    the page background, and the footer got an extra 24px of green on top — so
-   "Connect with Us" and "© CivPrepMaster. All rights reserved." ran together
+   "Connect with Us" and "© PSC Civil Prep. All rights reserved." ran together
    into one continuous green block with no gap between them. Leaving the
    wrappers alone restores the same gap every other page on the site has. */
 .social-media {
@@ -364,4 +364,27 @@ footer.footer,
     .book-list {
         grid-template-columns: repeat(2, 1fr) !important;
     }
+}
+
+/* Neutral text marks replace unavailable logo files; they are not official seals. */
+.agency-mark {
+    width: 100px;
+    height: 100px;
+    margin: 12px auto 18px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #d8e7dc;
+    border-radius: 50%;
+    background: #f2f8f3;
+    color: #28663a;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-align: center;
+}
+.agency-mark-large {
+    width: min(180px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    font-size: 1.15rem;
 }

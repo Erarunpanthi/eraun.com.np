@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="googlebot" content="index, follow">
   <title>PSC Civil Engineering Mock Tests - General | Arun Panthi</title>
-  <meta name="description" content="Free PSC Civil Engineering Mock Tests for Nepal - General category. Practice online mock tests for Lok Sewa Aayog exams with multiple sets.">
-  <meta name="keywords" content="PSC Nepal, Civil Engineering Mock Test, General Mock Test, Lok Sewa Aayog, online test, practice exam">
-  <link rel="canonical" href="https://arunpanthi.com.np/Psc-preparation/Mock-Test/General">
   
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="PSC Civil Engineering Mock Tests - General">
-  <meta property="og:description" content="Free PSC Civil Engineering Mock Tests for Nepal - General category">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arunpanthi.com.np/Psc-preparation/Mock-Test/General/">
-  <meta property="og:site_name" content="Arun Panthi">
   
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PSC Civil Engineering Mock Tests - General">
-  <meta name="twitter:description" content="Free PSC Civil Engineering Mock Tests for Nepal - General category">
   
   <link rel="stylesheet" href="/css/styles.css?v=20260924">
   <link rel="stylesheet" href="/css/grid.css?v=20261031">
@@ -50,26 +35,21 @@
   </section>
 
   <script>
-    // Total sets (dynamic generation)
-    const totalSets = 20;
+    const availableSets = [1, 2, 3];
     const bookList = document.getElementById("book-list");
 
-    for (let i = 1; i <= totalSets; i++) {
+    availableSets.forEach((setNumber) => {
       const article = document.createElement("article");
       article.className = "book";
-
-      // FIXED: Using a real file (index.php) with a query parameter.
-      // This guarantees a 200 OK response and zero redirects.
-      const link = `https://arunpanthi.com.np/Psc-preparation/Mock-Test/General/set=${i}`;
+      const link = `/Psc-preparation/Mock-Test/General/Set/${setNumber}.html`;
 
       article.innerHTML = `
-       <img src="/Photos/logo.png" 
-           alt="Set No: ${i}" width="150" height="150">
-        <h2>Set No: ${i}</h2>
-        <a href="${link}" class="cta-button" title="Start Mock Test Set ${i}" rel="noopener noreferrer">Start Exam</a>
+        <h2>General Mock Test Set ${setNumber}</h2>
+        <p>Timed civil-engineering practice questions.</p>
+        <a href="${link}" class="cta-button" title="Start General Mock Test Set ${setNumber}">Start Exam</a>
       `;
       bookList.appendChild(article);
-    }
+    });
   </script>
   
   <div id="social-section"></div>

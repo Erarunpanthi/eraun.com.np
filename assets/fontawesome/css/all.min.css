@@ -1,0 +1,59 @@
+/* Lightweight, local icon fallbacks for the study pages. */
+.fas,.fa-solid,.far,.fa-regular,.fab,.fa-brands,.fa {
+  display:inline-block;
+  font-style:normal;
+  font-weight:700;
+  line-height:1;
+  font-family:Arial, sans-serif;
+  text-align:center;
+}
+.fas::before,.fa-solid::before,.far::before,.fa-regular::before,.fab::before,.fa-brands::before,.fa::before { content:"•"; }
+.fa-archway::before { content:"⌂"; }
+.fa-arrow-down::before { content:"↓"; }
+.fa-arrow-right::before { content:"→"; }
+.fa-arrows-left-right::before { content:"↔"; }
+.fa-arrows-rotate::before { content:"↻"; }
+.fa-balance-scale::before,.fa-scale-balanced::before { content:"⚖"; }
+.fa-book-open::before { content:"▤"; }
+.fa-brain::before { content:"◉"; }
+.fa-building::before { content:"▥"; }
+.fa-car-side::before { content:"🚙"; }
+.fa-chart-line::before { content:"↗"; }
+.fa-clipboard-list::before { content:"☷"; }
+.fa-clock::before { content:"◷"; }
+.fa-code::before { content:"‹/›"; }
+.fa-compass::before { content:"◉"; }
+.fa-file-alt::before { content:"▤"; }
+.fa-font::before { content:"Aa"; }
+.fa-globe::before { content:"◎"; }
+.fa-graduation-cap::before { content:"🎓"; }
+.fa-handshake::before { content:"🤝"; }
+.fa-home::before { content:"⌂"; }
+.fa-id-card::before { content:"▣"; }
+.fa-landmark::before { content:"▤"; }
+.fa-language::before { content:"文"; }
+.fa-lightbulb::before { content:"💡"; }
+.fa-link::before { content:"↗"; }
+.fa-list::before { content:"☰"; }
+.fa-list-check::before { content:"☑"; }
+.fa-list-ol::before { content:"≡"; }
+.fa-object-group::before { content:"▧"; }
+.fa-plane::before { content:"✈"; }
+.fa-puzzle-piece::before { content:"▦"; }
+.fa-random::before { content:"⇄"; }
+.fa-road::before { content:"▥"; }
+.fa-ruler-combined::before { content:"📐"; }
+.fa-shapes::before { content:"◇"; }
+.fa-sitemap::before { content:"⌘"; }
+.fa-sort-numeric-up::before { content:"1↑"; }
+.fa-spinner::before { content:"◌"; }
+.fa-stopwatch::before { content:"⏱"; }
+.fa-tags::before { content:"◆"; }
+.fa-tint::before { content:"💧"; }
+.fa-train::before { content:"🚆"; }
+.fa-up-down-left-right::before { content:"↕"; }
+.fa-users::before { content:"♟♟"; }
+.fa-water::before { content:"≋"; }
+.fa-wifi::before { content:"◔"; }
+.fa-spin::before { animation: fa-spin 1.2s linear infinite; }
+@keyframes fa-spin { to { transform:rotate(360deg); } }

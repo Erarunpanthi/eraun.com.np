@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-NP">
+<head>
+  <title>PSC Daily Quiz for WhatsApp | Nepal Civil Engineering Prep</title>
+  <link rel="stylesheet" href="/css/styles.css?v=20261125">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="navbar"></div>
+  <main id="main-content" class="quiz-share-page">
+    <header class="hero">
+      <h1>Build a PSC practice quiz to share</h1>
+      <p>Choose a short set of civil engineering questions, then copy it or open WhatsApp to share with your study group.</p>
+    </header>
+    <section class="container" aria-labelledby="quiz-heading">
+      <h2 id="quiz-heading">Today’s sample quiz</h2>
+      <p>The answer key is placed after the questions so you can try them first.</p>
+      <ol id="quiz-preview" class="quiz-preview"></ol>
+      <div class="quiz-actions">
+        <button id="copy-quiz" class="cta-button" type="button">Copy quiz text</button>
+        <a id="share-quiz" class="cta-button" href="https://wa.me/" target="_blank" rel="noopener noreferrer">Share on WhatsApp ↗</a>
+      </div>
+      <p id="share-status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="section" aria-labelledby="official-source-heading">
+      <h2 id="official-source-heading">Use current official notices</h2>
+      <p>This is an independent practice aid, not an official PSC paper. Confirm vacancies, eligibility, syllabus, deadlines, and exam instructions on the Public Service Commission of Nepal’s website.</p>
+      <a class="cta-button" href="https://psc.gov.np/" target="_blank" rel="noopener noreferrer">Open PSC Nepal ↗</a>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="/js/layout.js?v=20261125" defer></script>
+  <script>
+    (() => {
+      const questions = [
+        { prompt: 'For a simply supported beam of span L carrying a full-span UDL w, what is the maximum bending moment?', options: ['wL²/8', 'wL²/2', 'wL/8', 'wL²/12'], answer: 0 },
+        { prompt: 'In the height-of-instrument method, how is HI calculated?', options: ['Known RL + backsight', 'Known RL − backsight', 'Foresight − known RL', 'Known RL + foresight'], answer: 0 },
+        { prompt: 'What is hydraulic radius?', options: ['Flow area divided by wetted perimeter', 'Wetted perimeter divided by flow area', 'Discharge divided by area', 'Flow depth divided by width'], answer: 0 },
+        { prompt: 'What is gravimetric water content?', options: ['Mass of water ÷ mass of dry soil', 'Mass of dry soil ÷ sample volume', 'Volume of air ÷ volume of voids', 'Mass of water ÷ total wet mass'], answer: 0 },
+        { prompt: 'For uniform open-channel flow, which relationship is used?', options: ['Energy slope equals bed slope', 'Energy slope is zero', 'Bed slope equals wetted perimeter', 'Velocity is independent of slope'], answer: 0 }
+      ];
+      const letters = ['A', 'B', 'C', 'D'];
+      const message = [
+        'PSC Civil Engineering Study Quiz',
+        '',
+        ...questions.map((question, index) => `${index + 1}. ${question.prompt}\n${question.options.map((option, optionIndex) => `${letters[optionIndex]}) ${option}`).join('\n')}`),
+        '',
+        `Answer key: ${questions.map((question, index) => `${index + 1}-${letters[question.answer]}`).join(' | ')}`,
+        '',
+        'Independent practice only. Check the current official PSC syllabus and notice: https://psc.gov.np/'
+      ].join('\n');
+      const preview = document.getElementById('quiz-preview');
+      const status = document.getElementById('share-status');
+      questions.forEach((question) => {
+        const item = document.createElement('li');
+        item.textContent = question.prompt;
+        preview.append(item);
+      });
+      document.getElementById('share-quiz').href = `https://wa.me/?text=${encodeURIComponent(message)}`;
+      document.getElementById('copy-quiz').addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(message);
+          status.textContent = 'Quiz copied. Paste it into your study group chat.';
+        } catch (_error) {
+          const field = document.createElement('textarea');
+          field.value = message;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.append(field);
+          field.select();
+          const copied = document.execCommand('copy');
+          field.remove();
+          status.textContent = copied ? 'Quiz copied. Paste it into your study group chat.' : 'Copy is unavailable in this browser; use Share on WhatsApp instead.';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
