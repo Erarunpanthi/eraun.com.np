@@ -412,6 +412,14 @@
         (function () {
             var path = location.pathname;
 
+            // GitHub Pages has no rewrite rules: send dated exam URLs to the
+            // static exam template with its supported date query parameter.
+            var examDate = path.match(/^\/Psc-preparation\/Current-Affairs\/exam\/date=(\d{4}-\d{2}-\d{2})\/?$/);
+            if (examDate) {
+                location.replace('/Psc-preparation/Current-Affairs/exam.html?date=' + examDate[1]);
+                return;
+            }
+
             // Don't redirect if it's a real file (has extension)
             if (/\.\w+$/.test(path)) return;
 

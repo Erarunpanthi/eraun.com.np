@@ -97,29 +97,16 @@
 </div>
 
 <script src="/Psc-preparation/Current-Affairs/nepali-date.js?v=20261030-4"></script>
-<script src="/Psc-preparation/Current-Affairs/tests.js?v=20261126-1"></script>
+<script src="/Psc-preparation/Current-Affairs/tests.js?v=20261126-2"></script>
 <script src="/js/Mock_Test.js?v=20261030"></script>
 <script>
 (function () {
-    // Dated paths work on static hosts; keep ?date= links working for older bookmarks.
+    // Query-string URLs serve reliably on static hosts and Apache.
+    // Accept legacy dated paths too when a server rewrite handles them.
     var match = window.location.pathname.match(/\/Psc-preparation\/Current-Affairs\/exam\/date=(\d{4}-\d{2}-\d{2})(?:\/(?:index\.html)?)?$/);
     var params = new URLSearchParams(window.location.search);
     var key = match ? match[1] : (params.get('date') || ''); // BS date, e.g. 2083-06-28
     if (!/^\d{4}-\d{2}-\d{2}$/.test(key)) key = '';
-
-    // Keep the public dated URL in the address bar. GitHub Pages cannot rewrite
-    // routes, so 404.html sends this request here; normalize the temporary
-    // template URL (and older query-string bookmarks) back to /exam/date=... .
-    if (key) {
-        var cleanPath = '/Psc-preparation/Current-Affairs/exam/date=' + key;
-        var extras = new URLSearchParams(window.location.search);
-        extras.delete('date');
-        var extraQuery = extras.toString();
-        var cleanUrl = cleanPath + (extraQuery ? '?' + extraQuery : '') + window.location.hash;
-        if (window.location.pathname !== cleanPath || window.location.search !== (extraQuery ? '?' + extraQuery : '')) {
-            window.history.replaceState(window.history.state, '', cleanUrl);
-        }
-    }
 
     var set = (window.CA_TESTS || {})[key];
     if (!set) {
@@ -139,7 +126,7 @@
     }
 
     var canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) canonical.href = 'https://arunpanthi.com.np/Psc-preparation/Current-Affairs/exam/date=' + key;
+    if (canonical) canonical.href = 'https://eraun.com.np/Psc-preparation/Current-Affairs/exam.html?date=' + key;
 
     // Give this Wednesday's set its own id so the one-attempt result is stored per week.
     var questionSet = {

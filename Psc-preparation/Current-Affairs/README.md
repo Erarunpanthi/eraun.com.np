@@ -2,12 +2,11 @@
 
 ## For students
 
-A card is listed for every Wednesday from the series start, plus any explicitly
-scheduled special test dates. Published tests show **Give Exam →** and open the
-timed exam at a Nepali-date URL such as
-`/Psc-preparation/Current-Affairs/exam/date=2083-06-28`. Dates without a question
-set show **Questions coming soon**, except dates listed in `CA_HOLIDAYS`, which
-show the holiday notice instead.
+A card is listed for every Wednesday from the series start. Published tests
+show **Give Exam →** and open the static exam template with a date query, such as
+`/Psc-preparation/Current-Affairs/exam.html?date=2083-06-28`. Dates without a
+question set show **Questions coming soon**, except dates listed in
+`CA_HOLIDAYS`, which show the holiday notice instead.
 
 ## Publishing a Wednesday test
 
