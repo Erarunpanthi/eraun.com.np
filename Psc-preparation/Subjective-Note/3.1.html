@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-NP">
+<head>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Hydrology: Hydrographs and Base Flow | PSC Subjective Note 3.1</title>
+    <link rel="stylesheet" href="/css/styles.css?v=20260924">
+    <link rel="stylesheet" href="/css/Syllabus.css">
+    <link rel="stylesheet" href="/css/Text.css">
+    <link rel="stylesheet" href="/css/note-pen.css?v=20261109-4">
+    <style>
+        .back-topics-btn { display: inline-block; background: #388e3c; color: #fff; padding: 8px 16px; font-weight: 600; border-radius: 8px; text-decoration: none; margin-top: 30px; }
+        .back-topics-btn:hover { background: #2e7d32; color: #fff; }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <main class="syllabus-wrapper">
+        <header class="doc-header">
+            <h1>Hydrology and Sediment</h1>
+            <h2>Hydrographs, Base Flow and Unit Hydrographs</h2>
+            <h3>PSC Subjective Note · Nepal Engineering Service (Civil), Second Paper</h3>
+        </header>
+
+        <section aria-labelledby="hydrograph">
+            <h2 class="section-title" id="hydrograph">Hydrograph</h2>
+            <div class="note-box">
+                <p>A <strong>hydrograph</strong> is a graphical representation of the discharge (volume of flow per unit time) of a stream at a specific location plotted against time. It reflects the continuous response of a catchment to rainfall or snowfall over time.</p>
+            </div>
+            <h3 class="sub-title">Components of a Flood Hydrograph</h3>
+            <ul>
+                <li><strong>Rising Limb (Concentration Curve):</strong> The ascending portion. Represents the increase in discharge as more areas of the catchment contribute to the outlet. Its shape depends on rainfall intensity, duration, and catchment properties.</li>
+                <li><strong>Crest Segment (Peak):</strong> The highest part containing the peak flow (Q<sub>p</sub>). Represents the point where the entire catchment is contributing to the flow at the outlet.</li>
+                <li><strong>Falling Limb (Recession Curve):</strong> The descending portion extending from the peak to the normal base flow level. Represents the withdrawal of stored water. Its shape depends entirely on catchment physical properties.</li>
+                <li><strong>Inflection Point:</strong> The point on the falling limb where the curve changes concavity. Roughly indicates when direct surface runoff ceases and groundwater becomes primary.</li>
+                <li><strong>Base Flow:</strong> The delayed flow reaching the stream as groundwater. Sustains river flow during dry periods.</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="base-flow">
+            <h2 class="section-title" id="base-flow">Base Flow and Its Separation</h2>
+            <p><strong>Base flow</strong> is the portion of streamflow that comes from groundwater seepage into the channel. It is the delayed flow that sustains the stream during periods without precipitation.</p>
+            <h3 class="sub-title">Methods of Base Flow Separation</h3>
+            <div class="note-box">
+                <p><strong>N = 0.83 × A<sup>0.2</sup> days</strong></p>
+                <p>Here, <strong>A</strong> is the drainage area in km<sup>2</sup>, and <strong>N</strong> is the number of days from the peak to Point B on the falling limb.</p>
+            </div>
+            <ol>
+                <li><strong>Straight Line Method (Method I):</strong> Draw a straight line connecting the point where the rising limb begins (Point A) to a point on the falling limb (Point B). Locate Point B using N = 0.83 × A<sup>0.2</sup> days from the peak. Suitable for small catchments.</li>
+                <li><strong>Fixed Base Length Method (Method II):</strong> Extend the base flow curve from the start of the rising limb to directly under the peak (Point C). From Point C, draw a straight line to Point B on the falling limb, calculated using N = 0.83 × A<sup>0.2</sup>. More realistic than Method I.</li>
+                <li><strong>Variable Slope Method (Method III):</strong> The initial base flow recession curve is extrapolated forward to a point directly under the peak (Point C). The recession curve from the latter part of the falling limb is extrapolated backward to a point under the inflection point (Point D). Points C and D are joined by a smooth curve. The most realistic method.</li>
+            </ol>
+        </section>
+
+        <section aria-labelledby="unit-hydrograph">
+            <h2 class="section-title" id="unit-hydrograph">Unit Hydrograph (UH)</h2>
+            <div class="note-box">
+                <p>A <strong>Unit Hydrograph (UH)</strong> is the Direct Runoff Hydrograph (DRH) resulting from 1 cm (or 1 inch) of effective rainfall generated uniformly over the entire catchment area at a uniform rate during a specified duration (D hours).</p>
+            </div>
+            <h3 class="sub-title">Basic Assumptions</h3>
+            <ol>
+                <li><strong>Time Invariance:</strong> The shape of the UH is independent of the time of the storm.</li>
+                <li><strong>Linear Response (Proportionality):</strong> If 1 cm of effective rainfall (ER) produces a certain DRH, then n cm in the same duration will produce a DRH with ordinates n times the UH ordinates.</li>
+                <li><strong>Superposition:</strong> The total DRH is the sum of the individual DRHs produced by each burst of rain, appropriately shifted in time.</li>
+                <li><strong>Uniform Intensity:</strong> Effective rainfall intensity is uniform throughout the specified duration.</li>
+                <li><strong>Uniform Distribution:</strong> Effective rainfall is distributed uniformly over the entire catchment area.</li>
+            </ol>
+            <h3 class="sub-title">Limitations</h3>
+            <ul>
+                <li>Not applicable for very large catchments (&gt;5,000 km<sup>2</sup>) or very small catchments (&lt;2 km<sup>2</sup>).</li>
+                <li>The theory fails if rainfall is highly concentrated in one part of the basin.</li>
+                <li>Cannot be applied to runoff caused by snowmelt.</li>
+                <li>In reality, hydrologic systems are somewhat non-linear; larger floods may travel faster than predicted.</li>
+            </ul>
+        </section>
+
+        <a href="/Psc-preparation/Subjective-Note/" class="back-topics-btn">Back to Topics</a>
+    </main>
+    <div id="social-section"></div>
+    <div id="footer"></div>
+    <script src="/js/layout.js?v=20260924" defer></script>
+    <script src="/js/note-pen.js?v=20261109-4" defer></script>
+</body>
+</html>
