@@ -1,0 +1,4 @@
+# Crawling must remain allowed so search engines can see the noindex directives.
+# This is not access control: visitors with a link can still open the website.
+User-agent: *
+Allow: /

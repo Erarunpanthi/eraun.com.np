@@ -100,7 +100,7 @@ footer,
    visible side effects on every page that loads this file (e.g. PSC Syllabus):
    the social bar's own 25px bottom gap was painted green instead of showing
    the page background, and the footer got an extra 24px of green on top — so
-   "Connect with Us" and "© CivPrepMaster. All rights reserved." ran together
+   "Connect with Us" and "© Study Resources. All rights reserved." ran together
    into one continuous green block with no gap between them. Leaving the
    wrappers alone restores the same gap every other page on the site has. */
 .social-media {
