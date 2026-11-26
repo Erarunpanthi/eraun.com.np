@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PSC Civil Engineering Model Exam Sets</title>
+  <link rel="stylesheet" href="/css/styles.css?v=20260924">
+  <link rel="stylesheet" href="/css/grid.css?v=20261031">
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css?v=20260924">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="container" id="mocktest-cards">
+    <h1 style="text-align: center;">PSC Civil Engineering Model Exam Sets</h1>
+    <div class="book-list" id="book-list"></div>
+  </main>
+
+  
+  <section class="faq" hidden>
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>What are Model Exam Sets?</summary>
+      <p>They are practice exams structured like official PSC Civil Engineering tests, helping you simulate real exam conditions.</p>
+    </details>
+    <details>
+      <summary>How do Model Exam Sets differ from Mock Tests?</summary>
+      <p>Mock tests provide practice questions, while model exam sets replicate the full exam format with timing and solutions.</p>
+    </details>
+    <details>
+      <summary>Can I access solutions?</summary>
+      <p>Yes, each model exam set includes solutions and explanations to guide your learning.</p>
+    </details>
+  </section>
+
+  <script>
+    const availableSets = [1, 2, 3, 4, 5];
+    const examList = document.getElementById("book-list");
+
+    availableSets.forEach((setNumber) => {
+      const article = document.createElement("article");
+      article.className = "book";
+      const link = `/Psc-preparation/model-exam-sets/Set/${setNumber}.html`;
+      article.innerHTML = `
+        <h2>Model Exam Set ${setNumber}</h2>
+        <p>Practice PSC exam set ${setNumber} with solutions.</p>
+        <a href="${link}" class="cta-button" title="Start Model Exam Set ${setNumber}">Start Exam</a>
+      `;
+      examList.appendChild(article);
+    });
+  </script>
+    <div id="social-section"></div>
+  <div id="footer"></div>
+  <script src="/js/layout.js?v=20260924"></script>
+</body>
+</html>
