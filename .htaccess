@@ -1,13 +1,11 @@
 RewriteEngine On
 
-# Canonical host: match the domain configured in CNAME (eraun.com.np).
-# Also redirect the previous domain, if still pointed here, to the canonical host.
+# Enforce HTTPS and the canonical host configured in CNAME.
 RewriteCond %{HTTPS} !=on [OR]
-RewriteCond %{HTTP_HOST} ^(www\.)?arunpanthi\.com\.np$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www\.eraun\.com\.np$ [NC]
 RewriteRule ^ https://eraun.com.np%{REQUEST_URI} [R=301,L]
 
-# Keep the previous home URL working as a permanent alias.
+# Keep the legacy Home URL working as a permanent alias.
 RewriteRule ^Home(?:\.html)?$ / [R=301,L,NC]
 
 # Remove trailing slash except for real directories
