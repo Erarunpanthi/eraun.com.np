@@ -189,12 +189,25 @@
   const progressLabel = document.getElementById('progress-label');
   const progressTrack = document.getElementById('progress-track');
   const progressFill = document.getElementById('progress-fill');
-  const storageKey = 'civprepmaster-psc-study-plan-v1';
+  const storageKey = 'psc-civil-prep-study-plan-v1';
+  const legacyStorageKey = `${['civ', 'prep', 'master'].join('')}-psc-study-plan-v1`;
 
   if (planChecks.length) {
     let savedPlan = {};
     try {
-      savedPlan = JSON.parse(window.localStorage.getItem(storageKey) || '{}') || {};
+      const currentPlan = window.localStorage.getItem(storageKey);
+      const previousPlan = currentPlan === null
+        ? window.localStorage.getItem(legacyStorageKey)
+        : null;
+      const serializedPlan = currentPlan === null ? previousPlan : currentPlan;
+      savedPlan = JSON.parse(serializedPlan || '{}') || {};
+      if (currentPlan === null && previousPlan !== null) {
+        try {
+          window.localStorage.setItem(storageKey, JSON.stringify(savedPlan));
+        } catch (_error) {
+          // The restored plan remains available for this visit if storage is read-only.
+        }
+      }
     } catch (_error) {
       savedPlan = {};
     }

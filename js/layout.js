@@ -26,7 +26,7 @@
   if (footer) {
     footer.innerHTML = `
       <footer class="footer">
-        <p>© <span id="footer-year"></span> CivPrepMaster · Independent PSC Civil Engineering study resource.</p>
+        <p>© <span id="footer-year"></span> PSC Civil Prep · Independent PSC Civil Engineering study resource.</p>
         <p>
           <a href="/">Home</a> |
           <a href="/Psc-preparation/">Study Hub</a> |

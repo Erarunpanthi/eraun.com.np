@@ -556,7 +556,7 @@ h1, h2, h3, p { margin-top: 0; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
 
-/* Classic CivPrepMaster look: green bars, light-green canvas, centered white cards,
+/* Classic PSC Civil Prep look: green bars, light-green canvas, centered white cards,
    serif type, and orange actions, inspired by the earlier PSC site. */
 :root {
   --ink: #1e1e1e;
