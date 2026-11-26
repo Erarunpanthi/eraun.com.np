@@ -42,6 +42,8 @@ RewriteRule ^(.*/)?index\.php$ /$1 [R=301,L]
 
 # Cache-Control + security headers
 <IfModule mod_headers.c>
+    # Reinforce page-level noindex for all resources on Apache hosting.
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
     <FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp|css|js|woff|woff2)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
