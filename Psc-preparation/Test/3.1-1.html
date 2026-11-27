@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structural Engineering: CG and Moment of Inertia | PSC Test 3.1 Set 1</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/Mock_Test.css?v=20261030">
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css?v=20260924">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <span class="brand" id="navbar-brand">Structural Engineering · Set 1</span>
+  <span class="timer-display" id="timer-display" style="display:none;">--:--</span>
+</nav>
+<div id="warning-modal" class="modal-overlay" style="display:none;"><div class="modal-dialog"><div class="warning-icon">⚠️</div><h3>Unanswered Questions</h3><p>You haven't answered all the questions.</p><span class="unanswered-count" id="modal-unanswered-count">0 unanswered</span><p style="margin-top:8px;"><strong>⚠ This test cannot be retaken once submitted!</strong></p><div class="modal-buttons"><button class="btn-cancel" id="btn-modal-cancel">Cancel</button><button class="btn-submit-warning" id="btn-modal-submit">Submit Anyway</button></div></div></div>
+<div id="pre-test-section"><div class="hero" id="hero-card"><h1 id="hero-set-name">Loading...</h1><p class="set-details" id="hero-details"></p><div class="set-meta"><div class="meta-item"><span id="hero-q-count">0</span> Questions</div><div class="meta-item"><span id="hero-time">0:00</span> Time (min)</div></div><button class="btn-start" id="btn-start-test">🚀 Start Test</button><p style="margin-top:10px;font-size:0.85rem;opacity:0.8;" id="hero-note"></p></div></div>
+<div id="test-section" style="display:none;"><div class="test-container"><div class="question-area"><div class="question-card"><div class="q-number" id="q-number-label">QUESTION 1</div><div class="q-text" id="q-text">Loading question...</div><ul class="options-list" id="options-list"></ul></div><div class="nav-buttons"><div class="nav-left"><button class="btn-nav" id="btn-prev">◀ Previous</button></div><div class="nav-center"><button class="btn-submit" id="btn-submit-test">✅ Submit Test</button></div><div class="nav-right"><button class="btn-nav" id="btn-next">Next ▶</button></div></div></div><aside class="sidebar"><h3>📋 Questions</h3><div class="total-questions" id="sidebar-total">Total: 0</div><div class="answered-count">Answered: <strong id="sidebar-answered-num">0</strong></div><div class="q-grid" id="q-grid"></div><div class="legend"><span><span class="dot-sample blue"></span> Answered</span><span><span class="dot-sample gray"></span> Unanswered</span></div></aside></div></div>
+<div id="results-section" style="display:none;"><div class="results-container"><div class="results-header"><h2 style="color:#2E7D32;">📊 Test Results</h2><p style="color:#666;" id="results-set-name"></p><div class="score-circle"><span class="score-num" id="results-score">0</span><span class="score-denom" id="results-denom">/ 0</span></div><div class="percentage" id="results-percentage">0%</div><p style="margin-top:8px;color:#888;font-size:0.9rem;" id="results-time-taken"></p></div><div id="results-detail"></div></div></div>
+<script src="/js/Mock_Test.js?v=20261030"></script>
+<script>
+window.startTest({
+    name: 'Structural Engineering — CG and Moment of Inertia',
+    details: '60 MCQs on centroids, moments of inertia, material properties, stress, strain, shear and torsion. One point per question; answer explanations are shown after submission.',
+    timeLimitMinutes: 60,
+    questions:         [
+                {
+                        "question": "The centroid of a circular quadrant of radius r is located how far from each straight radial edge?",
+                        "options": [
+                                "4r/(3π)",
+                                "2r/π",
+                                "8r/(3π)",
+                                "3r/4"
+                        ],
+                        "correct": 0,
+                        "explanation": "For a quarter-circle area, the centroid is 4r/(3π) from each of the two straight radial edges. This follows from the first moment of area divided by the quadrant area, πr²/4."
+                },
+                {
+                        "question": "The centre of gravity of a rectangle lies at the point where",
+                        "options": [
+                                "its diagonals intersect",
+                                "the midpoint of its longest side",
+                                "the midpoint of its shortest side",
+                                "none of the above"
+                        ],
+                        "correct": 0,
+                        "explanation": "A uniform rectangle is symmetric about both diagonals. Its centre of gravity is at their intersection, which is also the midpoint of its length and breadth."
+                },
+                {
+                        "question": "The locus of the moment of inertia about axes inclined to the principal axes is a",
+                        "options": [
+                                "straight line",
+                                "parabola",
+                                "circle",
+                                "ellipse"
+                        ],
+                        "correct": 3,
+                        "explanation": "The moment of inertia varies with the axis angle according to the standard transformation equations. The plotted locus is the momental ellipse."
+                },
+                {
+                        "question": "The moment of inertia of a circular section of diameter d about a centroidal axis is",
+                        "options": [
+                                "πd⁴/64",
+                                "πd⁴/32",
+                                "πd⁴/16",
+                                "πd³/32"
+                        ],
+                        "correct": 0,
+                        "explanation": "For a solid circle, the second moment of area about any centroidal diameter is I = πd⁴/64."
+                },
+                {
+                        "question": "By how much does the moment of inertia increase when an axis is shifted a distance d parallel to the centroidal axis? (A is the cross-sectional area.)",
+                        "options": [
+                                "A × d",
+                                "A × d²",
+                                "A × d³",
+                                "A × d⁴"
+                        ],
+                        "correct": 1,
+                        "explanation": "The parallel-axis theorem gives I = I_G + Ad². Therefore, the increase over the centroidal moment of inertia is Ad²."
+                },
+                {
+                        "question": "The moment of inertia of a square section of side a about a centroidal axis parallel to one of its sides is",
+                        "options": [
+                                "a⁴/2",
+                                "a⁴/6",
+                                "a⁴/12",
+                                "a⁴/√12"
+                        ],
+                        "correct": 2,
+                        "explanation": "For a square of side a, I = bd³/12 with b = d = a, so I = a⁴/12."
+                },
+                {
+                        "question": "The moment of inertia of a triangular section about its centroidal axis parallel to its base is",
+                        "options": [
+                                "bh³/36",
+                                "bh³/12",
+                                "bh³/2",
+                                "bh³/64"
+                        ],
+                        "correct": 0,
+                        "explanation": "For a triangle, I about the base is bh³/12. Applying the parallel-axis theorem to shift to the centroidal axis gives I_G = bh³/36."
+                },
+                {
+                        "question": "The moment of inertia of a triangular section of base b and height h about its base is",
+                        "options": [
+                                "bh²/12",
+                                "b²h/12",
+                                "bh³/12",
+                                "b³h/12"
+                        ],
+                        "correct": 2,
+                        "explanation": "Integrating y² dA for the triangular area about its base gives I = bh³/12."
+                },
+                {
+                        "question": "The centroidal moment of inertia of a square section of side a is",
+                        "options": [
+                                "a²/14",
+                                "a⁴/12",
+                                "a⁶/12",
+                                "a⁴/16"
+                        ],
+                        "correct": 1,
+                        "explanation": "Using the rectangle formula I = bd³/12 with b = d = a gives I = a⁴/12."
+                },
+                {
+                        "question": "The centroidal moment of inertia of a triangular section with base 4 cm and depth 9 cm is",
+                        "options": [
+                                "36 cm⁴",
+                                "81 cm⁴",
+                                "9 cm⁴",
+                                "4 cm⁴"
+                        ],
+                        "correct": 1,
+                        "explanation": "For the centroidal axis parallel to the base, I = bh³/36 = 4 × 9³/36 = 81 cm⁴."
+                },
+                {
+                        "question": "The point at which the entire weight of a body may be assumed to act is its",
+                        "options": [
+                                "centroid",
+                                "free-body diagram",
+                                "centre of gravity",
+                                "neutral axis"
+                        ],
+                        "correct": 2,
+                        "explanation": "The centre of gravity is the point through which the resultant weight of a body may be considered to act. A centroid is a geometric centre and coincides with the centre of gravity for a uniform-density body."
+                },
+                {
+                        "question": "The product of inertia about a pair of principal axes is",
+                        "options": [
+                                "infinite",
+                                "one",
+                                "zero",
+                                "half"
+                        ],
+                        "correct": 2,
+                        "explanation": "At the principal axes, the product of inertia is zero. This is the defining condition used to locate principal axes."
+                },
+                {
+                        "question": "A rectangular section has b = 7 cm and d = 12 cm. Its radius of gyration about the centroidal axis parallel to the 7 cm side is approximately",
+                        "options": [
+                                "3.46 cm",
+                                "2.02 cm",
+                                "12 cm",
+                                "7 cm"
+                        ],
+                        "correct": 0,
+                        "explanation": "For an axis parallel to the 7 cm side, k = √(I/A) = d/√12 = 12/√12 ≈ 3.46 cm."
+                },
+                {
+                        "question": "The square root of the ratio of the moment of inertia to the cross-sectional area is called the",
+                        "options": [
+                                "section modulus",
+                                "slenderness ratio",
+                                "radius of gyration",
+                                "shear modulus"
+                        ],
+                        "correct": 2,
+                        "explanation": "The radius of gyration is k = √(I/A). It is the distance at which the whole area could be concentrated to give the same moment of inertia."
+                },
+                {
+                        "question": "The gross moment of inertia of a rectangular concrete beam of width b and depth D about its centroidal axis is",
+                        "options": [
+                                "bD²/4",
+                                "b²D/4",
+                                "bD²/6",
+                                "bD³/12"
+                        ],
+                        "correct": 3,
+                        "explanation": "For a rectangular section, the centroidal moment of inertia about the axis parallel to the width is I = bD³/12."
+                },
+                {
+                        "question": "For principal axes of a section, which quantity is zero?",
+                        "options": [
+                                "the sum of the moments of inertia",
+                                "the difference of the moments of inertia",
+                                "the product of inertia",
+                                "none of the above"
+                        ],
+                        "correct": 2,
+                        "explanation": "The product of inertia Ixy is zero about principal axes. The two principal moments are not generally equal."
+                },
+                {
+                        "question": "The moment of inertia of a circular cross-section of diameter d about a centroidal diameter is",
+                        "options": [
+                                "πd³/32",
+                                "πd⁴/32",
+                                "πd³/64",
+                                "πd⁴/64"
+                        ],
+                        "correct": 3,
+                        "explanation": "For a solid circular section, I = πd⁴/64 about any centroidal diameter."
+                },
+                {
+                        "question": "The unit of area moment of inertia is",
+                        "options": [
+                                "cm³",
+                                "cm²",
+                                "cm",
+                                "cm⁴"
+                        ],
+                        "correct": 3,
+                        "explanation": "Area moment of inertia is the integral of a squared distance over an area, so its dimension is length to the fourth power."
+                },
+                {
+                        "question": "The moment of inertia of a rectangular section of width b and depth d about its centroidal neutral axis is",
+                        "options": [
+                                "bd³/12",
+                                "bd²/6",
+                                "bd²/3",
+                                "bd³/3"
+                        ],
+                        "correct": 0,
+                        "explanation": "For bending about the centroidal axis parallel to the width, I = bd³/12."
+                },
+                {
+                        "question": "The moment of inertia of a circular section about a centroidal diameter is",
+                        "options": [
+                                "πd³/16",
+                                "πd³/32",
+                                "πd⁴/32",
+                                "πd⁴/64"
+                        ],
+                        "correct": 3,
+                        "explanation": "A solid circle has I = πd⁴/64 about any centroidal diameter."
+                },
+                {
+                        "question": "The moment of inertia of a semicircular lamina about its vertical axis of symmetry is",
+                        "options": [
+                                "πD⁴/64",
+                                "πR⁴/4",
+                                "πD⁴/128",
+                                "AR²/8"
+                        ],
+                        "correct": 2,
+                        "explanation": "The vertical symmetry axis divides the full circle's diametral moment equally. Thus I = πR⁴/8 = πD⁴/128."
+                },
+                {
+                        "question": "The centroidal moment of inertia of a square section of side a is",
+                        "options": [
+                                "a⁴/12",
+                                "a³/12",
+                                "a⁵/12",
+                                "a⁴/6"
+                        ],
+                        "correct": 0,
+                        "explanation": "For a square, I = bd³/12 = a⁴/12 about a centroidal axis parallel to a side."
+                },
+                {
+                        "question": "Tension in a member produces",
+                        "options": [
+                                "direct stress",
+                                "indirect stress",
+                                "combined stress",
+                                "none of the above"
+                        ],
+                        "correct": 0,
+                        "explanation": "An axial tensile force produces normal direct stress on the cross-section, equal to the axial force divided by area."
+                },
+                {
+                        "question": "The ability of a material to resist failure under an applied load is called",
+                        "options": [
+                                "strength",
+                                "toughness",
+                                "plasticity",
+                                "brittleness"
+                        ],
+                        "correct": 0,
+                        "explanation": "Strength is a material's capacity to resist applied loads without failure. Stiffness, by contrast, describes resistance to deformation."
+                },
+                {
+                        "question": "The area under a complete stress–strain curve up to fracture represents the",
+                        "options": [
+                                "energy required to cause failure",
+                                "hardness of the material",
+                                "toughness of the material",
+                                "breaking strength of the material"
+                        ],
+                        "correct": 2,
+                        "explanation": "The area under the stress–strain curve up to fracture represents energy absorbed per unit volume, called toughness. The area up to the elastic limit represents resilience."
+                },
+                {
+                        "question": "Within the elastic limit, the relationship between stress and strain is",
+                        "options": [
+                                "linear",
+                                "elliptical",
+                                "parabolic",
+                                "hyperbolic"
+                        ],
+                        "correct": 0,
+                        "explanation": "Within the proportional limit, stress is proportional to strain according to Hooke's law, giving a linear relationship."
+                },
+                {
+                        "question": "Normal stress acts",
+                        "options": [
+                                "parallel to the plane",
+                                "perpendicular to the plane",
+                                "both parallel and perpendicular",
+                                "in neither direction"
+                        ],
+                        "correct": 1,
+                        "explanation": "Normal stress acts perpendicular to the plane on which it is defined. Shear stress acts parallel to the plane."
+                },
+                {
+                        "question": "The factor of safety commonly used for steel is generally _____ than that used for concrete.",
+                        "options": [
+                                "the same",
+                                "lower",
+                                "higher",
+                                "none of the above"
+                        ],
+                        "correct": 1,
+                        "explanation": "Steel is generally more uniform and predictable than concrete, so design practice commonly uses a lower factor of safety for steel than for concrete, subject to the applicable code and design method."
+                },
+                {
+                        "question": "A factor of safety is considered in",
+                        "options": [
+                                "the working stress method",
+                                "the ultimate strength design method",
+                                "the limit state design method",
+                                "all of these methods"
+                        ],
+                        "correct": 3,
+                        "explanation": "All these design approaches account for safety margins, though they do so differently: allowable stresses, load factors, or partial safety factors."
+                },
+                {
+                        "question": "For a rectangular section, the ratio of maximum shear stress to average shear stress is",
+                        "options": [
+                                "1.1",
+                                "1.3",
+                                "1.4",
+                                "1.5"
+                        ],
+                        "correct": 3,
+                        "explanation": "For a rectangular section, the parabolic shear-stress distribution gives τmax = 1.5(V/A), or 1.5 times the average shear stress."
+                },
+                {
+                        "question": "A material with the same elastic properties in all directions is called",
+                        "options": [
+                                "isotropic",
+                                "brittle",
+                                "homogeneous",
+                                "hard"
+                        ],
+                        "correct": 0,
+                        "explanation": "An isotropic material has the same properties in every direction. Homogeneity refers instead to uniform properties from point to point."
+                },
+                {
+                        "question": "The maximum strain energy stored by a body up to its elastic limit is called",
+                        "options": [
+                                "resilience",
+                                "proof resilience",
+                                "modulus of resilience",
+                                "bulk resilience"
+                        ],
+                        "correct": 1,
+                        "explanation": "Proof resilience is the total strain energy stored up to the elastic limit. Modulus of resilience is this energy per unit volume."
+                },
+                {
+                        "question": "The maximum shear stress in a rectangular beam section is",
+                        "options": [
+                                "1.25 times the average",
+                                "1.5 times the average",
+                                "1.75 times the average",
+                                "2.00 times the average"
+                        ],
+                        "correct": 1,
+                        "explanation": "For a rectangular section, maximum shear stress at the neutral axis is 1.5 times the average value V/A."
+                },
+                {
+                        "question": "The modulus of elasticity of mild steel is approximately",
+                        "options": [
+                                "10 kN/mm²",
+                                "80 kN/mm²",
+                                "100 kN/mm²",
+                                "210 kN/mm²"
+                        ],
+                        "correct": 3,
+                        "explanation": "Young's modulus for mild or structural steel is commonly taken as about 200–210 kN/mm² (GPa)."
+                },
+                {
+                        "question": "The modulus of elasticity of an ideal rigid body is",
+                        "options": [
+                                "zero",
+                                "the ratio of stress to strain",
+                                "five times that of a flexible body",
+                                "infinite"
+                        ],
+                        "correct": 3,
+                        "explanation": "An ideal rigid body has zero strain for finite stress. Since E = stress/strain, its ideal modulus of elasticity is infinite."
+                },
+                {
+                        "question": "A commonly used approximate modulus of elasticity for timber is",
+                        "options": [
+                                "8 kN/mm²",
+                                "9 kN/mm²",
+                                "10 kN/mm²",
+                                "11 kN/mm²"
+                        ],
+                        "correct": 3,
+                        "explanation": "Some engineering references use about 11 kN/mm² as an approximate value for timber; actual values vary considerably with species, grade, moisture and grain direction."
+                },
+                {
+                        "question": "The neutral axis of a beam in bending is subjected to _____ bending stress.",
+                        "options": [
+                                "zero",
+                                "maximum tensile",
+                                "minimum tensile",
+                                "maximum compressive"
+                        ],
+                        "correct": 0,
+                        "explanation": "Bending stress varies linearly with distance from the neutral axis and is zero on the neutral axis."
+                },
+                {
+                        "question": "The percentage elongation measured in a direct tensile test indicates",
+                        "options": [
+                                "ductility",
+                                "strength",
+                                "yield stress",
+                                "ultimate strength"
+                        ],
+                        "correct": 0,
+                        "explanation": "Percentage elongation is a standard measure of ductility, indicating how much plastic deformation a material undergoes before fracture."
+                },
+                {
+                        "question": "The percentage reduction in area in a tensile test is an indicator of",
+                        "options": [
+                                "ductility",
+                                "elasticity",
+                                "malleability",
+                                "brittleness"
+                        ],
+                        "correct": 0,
+                        "explanation": "Reduction in area at fracture is a measure of ductility and plastic deformation capacity, not elasticity."
+                },
+                {
+                        "question": "The property by which a material undergoes permanent deformation is called",
+                        "options": [
+                                "elasticity",
+                                "plasticity",
+                                "slip deformation",
+                                "none of the above"
+                        ],
+                        "correct": 1,
+                        "explanation": "Plasticity is the ability to undergo permanent deformation without rupture. Slip is one microscopic mechanism that can produce plastic deformation in crystalline materials."
+                },
+                {
+                        "question": "Poisson's ratio for common engineering materials generally varies from",
+                        "options": [
+                                "1 to 1.5",
+                                "0.15 to 0.4",
+                                "0.5 to 1",
+                                "1.5 to 2.5"
+                        ],
+                        "correct": 1,
+                        "explanation": "For many common engineering materials, Poisson's ratio is approximately 0.15–0.4; the exact value depends on the material."
+                },
+                {
+                        "question": "Poisson's ratio for steel generally varies from",
+                        "options": [
+                                "0.23 to 0.27",
+                                "0.25 to 0.33",
+                                "0.31 to 0.34",
+                                "0.32 to 0.42"
+                        ],
+                        "correct": 1,
+                        "explanation": "Steel's Poisson's ratio is commonly taken in the approximate range 0.25–0.33."
+                },
+                {
+                        "question": "The property of a material by which it resists deformation is called",
+                        "options": [
+                                "ductility",
+                                "brittleness",
+                                "stiffness",
+                                "creep"
+                        ],
+                        "correct": 2,
+                        "explanation": "Stiffness is resistance to deformation under load. Young's modulus is a quantitative measure of elastic stiffness."
+                },
+                {
+                        "question": "The ratio of lateral strain to longitudinal strain in magnitude is known as",
+                        "options": [
+                                "yield ratio",
+                                "Hooke's ratio",
+                                "Poisson's ratio",
+                                "plastic ratio"
+                        ],
+                        "correct": 2,
+                        "explanation": "Poisson's ratio is the magnitude of lateral strain divided by longitudinal strain under axial loading; sign conventions may include a negative sign."
+                },
+                {
+                        "question": "The ratio of normal (linear) stress to the corresponding linear strain within the elastic range is called",
+                        "options": [
+                                "modulus of rigidity",
+                                "modulus of elasticity",
+                                "bulk modulus",
+                                "Poisson's ratio"
+                        ],
+                        "correct": 1,
+                        "explanation": "Young's modulus, or modulus of elasticity, is the ratio of normal stress to the corresponding normal strain within the elastic range."
+                },
+                {
+                        "question": "For a rectangular section, the ratio of maximum shear stress to average shear stress is",
+                        "options": [
+                                "1",
+                                "1.25",
+                                "1.5",
+                                "2"
+                        ],
+                        "correct": 2,
+                        "explanation": "The maximum shear stress in a rectangular section is 1.5 times the average shear stress V/A."
+                },
+                {
+                        "question": "The ratio of shearing stress to shearing strain within the elastic limit is the",
+                        "options": [
+                                "modulus of elasticity",
+                                "shear modulus of elasticity",
+                                "bulk modulus of elasticity",
+                                "tangent modulus of elasticity"
+                        ],
+                        "correct": 1,
+                        "explanation": "The ratio of shear stress to shear strain in the elastic range is the shear modulus, also called the modulus of rigidity."
+                },
+                {
+                        "question": "For a rectangular beam section, the ratio of maximum shear stress to average shear stress is",
+                        "options": [
+                                "1.15",
+                                "1.25",
+                                "1.5",
+                                "1.75"
+                        ],
+                        "correct": 2,
+                        "explanation": "For a rectangular section, the shear stress distribution is parabolic and its maximum value is 1.5 times V/A."
+                },
+                {
+                        "question": "The SI unit of the modulus of elasticity is",
+                        "options": [
+                                "newton per square metre (N/m²)",
+                                "newton per square centimetre (N/cm²)",
+                                "newton per square millimetre (N/mm²)",
+                                "all of the above are SI units"
+                        ],
+                        "correct": 0,
+                        "explanation": "Modulus of elasticity has the dimensions of stress. Its coherent SI unit is N/m², the pascal; N/cm² and N/mm² are commonly used multiples but are not coherent SI units."
+                },
+                {
+                        "question": "In a solid circular shaft under torsion, the shear stress at the centre is",
+                        "options": [
+                                "zero",
+                                "minimum but nonzero",
+                                "maximum",
+                                "infinite"
+                        ],
+                        "correct": 0,
+                        "explanation": "In a solid circular shaft, torsional shear stress varies linearly with radius, so it is zero at the centre and maximum at the outer surface."
+                },
+                {
+                        "question": "The strain energy due to volumetric strain is",
+                        "options": [
+                                "directly proportional to volume",
+                                "directly proportional to the square of the applied pressure",
+                                "inversely proportional to bulk modulus",
+                                "all of the above"
+                        ],
+                        "correct": 3,
+                        "explanation": "For hydrostatic pressure, strain energy is proportional to volume and pressure squared, and inversely proportional to bulk modulus: U = p²V/(2K)."
+                },
+                {
+                        "question": "The strain energy stored in a member up to the greatest load that causes no permanent distortion is called",
+                        "options": [
+                                "stiffness",
+                                "proof resilience",
+                                "proof stress",
+                                "proof load"
+                        ],
+                        "correct": 1,
+                        "explanation": "Proof resilience is the total elastic strain energy stored up to the elastic limit. Proof stress and proof load refer to stress and load, respectively."
+                },
+                {
+                        "question": "The stress induced by a temperature change in a member depends primarily on its",
+                        "options": [
+                                "length",
+                                "cross-sectional area",
+                                "end-support condition",
+                                "none of the above"
+                        ],
+                        "correct": 2,
+                        "explanation": "Thermal stress depends on how much the supports restrain the member's free expansion or contraction. A freely moving member develops no thermal stress."
+                },
+                {
+                        "question": "Stress in a loaded member is",
+                        "options": [
+                                "continued deformation under sustained loading",
+                                "load per unit area",
+                                "the internal resistance offered by the material per unit area",
+                                "strain per unit length"
+                        ],
+                        "correct": 2,
+                        "explanation": "Stress is the internal resisting force per unit area developed in a material under external loading. It is calculated as force divided by area for a uniform axial case."
+                },
+                {
+                        "question": "A standard tensile test is most informative when performed on a _____ material.",
+                        "options": [
+                                "ductile",
+                                "brittle",
+                                "malleable",
+                                "plastic"
+                        ],
+                        "correct": 0,
+                        "explanation": "A tensile test on a ductile material reveals yield strength, ultimate strength, elongation and reduction in area through substantial measurable deformation."
+                },
+                {
+                        "question": "For common engineering materials, Poisson's ratio is",
+                        "options": [
+                                "less than one",
+                                "greater than one",
+                                "equal to one",
+                                "none of the above"
+                        ],
+                        "correct": 0,
+                        "explanation": "For ordinary stable isotropic elastic materials, Poisson's ratio is below one (typically between about −1 and 0.5)."
+                },
+                {
+                        "question": "The Young's modulus of elasticity of structural steel is approximately",
+                        "options": [
+                                "150 kN/mm²",
+                                "200 kN/mm²",
+                                "275 kN/mm²",
+                                "250 kN/mm²"
+                        ],
+                        "correct": 1,
+                        "explanation": "Young's modulus for structural steel is commonly taken as approximately 200 kN/mm², or 200 GPa."
+                },
+                {
+                        "question": "Torsion is produced in a beam when a load acts with an eccentricity from its",
+                        "options": [
+                                "magnitude",
+                                "type of support",
+                                "centroidal or shear-centre axis",
+                                "type of beam"
+                        ],
+                        "correct": 2,
+                        "explanation": "A load acting away from the centroidal axis or shear centre produces a twisting moment (torsion), in addition to any bending effect."
+                },
+                {
+                        "question": "A torsional moment on a beam or shaft acts",
+                        "options": [
+                                "along the beam axis",
+                                "around the beam's longitudinal axis",
+                                "in the direction of transverse shear",
+                                "only in the plane of bending"
+                        ],
+                        "correct": 1,
+                        "explanation": "Torque acts about the member's longitudinal axis and twists cross-sections relative to one another."
+                },
+                {
+                        "question": "When a bar's temperature changes but its deformation is fully prevented, the induced stress is called",
+                        "options": [
+                                "tensile stress",
+                                "compressive stress",
+                                "shear stress",
+                                "thermal stress"
+                        ],
+                        "correct": 3,
+                        "explanation": "A restrained temperature change creates thermal stress. Heating generally causes compression and cooling generally causes tension under full restraint."
+                }
+        ]
+});
+</script>
+<script src="/js/text-protect.js" defer></script>
+<script src="/js/logo.js?v=20261101"></script>
+</body>
+</html>

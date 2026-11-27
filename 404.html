@@ -426,6 +426,12 @@
                 return;
             }
 
+            // Resolve the clean URL for Structural Engineering test set 1.
+            if (/^\/Psc-preparation\/Test\/3\.1-1\/?$/.test(path)) {
+                location.replace('/Psc-preparation/Test/3.1-1.html');
+                return;
+            }
+
             // Don't redirect if it's a real file (has extension)
             if (/\.\w+$/.test(path)) return;
 
