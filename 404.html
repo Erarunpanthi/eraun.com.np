@@ -420,6 +420,12 @@
                 return;
             }
 
+            // GitHub Pages also needs a fallback for the clean subjective-note URL.
+            if (/^\/Psc-preparation\/Subjective-Note\/3\.3\/?$/.test(path)) {
+                location.replace('/Psc-preparation/Subjective-Note/3.3.html');
+                return;
+            }
+
             // Don't redirect if it's a real file (has extension)
             if (/\.\w+$/.test(path)) return;
 

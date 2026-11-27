@@ -11,6 +11,9 @@ RewriteRule ^Home(?:\.html)?$ / [R=301,L,NC]
 # Route dated Current Affairs exam URLs to the static exam template.
 RewriteRule ^Psc-preparation/Current-Affairs/exam/date=(\d{4}-\d{2}-\d{2})/?$ /Psc-preparation/Current-Affairs/exam.html?date=$1 [L,QSA]
 
+# Serve the clean URL for the Irrigation subjective note.
+RewriteRule ^Psc-preparation/Subjective-Note/3\.3/?$ /Psc-preparation/Subjective-Note/3.3.html [L]
+
 # Remove trailing slash except for real directories
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} .+/$
